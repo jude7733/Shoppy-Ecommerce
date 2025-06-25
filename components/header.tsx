@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const menuItems = [
-  { name: 'Categories', href: '#categories' },
+  { name: 'Categories', href: '/#categories' },
   { name: 'Products', href: '/products' },
 ]
 
