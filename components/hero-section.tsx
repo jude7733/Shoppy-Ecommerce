@@ -2,12 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import { HeroHeader } from './header'
 
 export default function HeroSection() {
   return (
     <>
-      <HeroHeader />
       <main className="overflow-x-hidden">
         <section>
           <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">

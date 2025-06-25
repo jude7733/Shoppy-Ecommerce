@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ik.imagekit.io',
-        pathname: '/lrigu76hy/tailark/abstract-bg.jpg',
+        hostname: 'fakestoreapi.com',
+        pathname: '/**',
       },
     ],
   },

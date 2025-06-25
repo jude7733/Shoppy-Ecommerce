@@ -6,24 +6,24 @@ export default async function Category() {
   const category = await data.json()
 
   return (
-    <div className="flex flex-col w-full px-6 mx-auto">
-      <h2 className="text-4xl">Categories</h2>
-      <div key={category} className="mb-8 w-full grid grid-cols-2 grid-rows-2">
+    <div id="categories" className="flex flex-col w-full px-6 md:px-60 my-20 bg-secondary py-10 mx-auto">
+      <h2 className="text-4xl mb-10">Categories</h2>
+      <div key={category} className="mb-8 w-full grid grid-cols-2 grid-rows-2 gap-18">
         {
           category.map((category: string) => (
-            <BackgroundGradient key={category} className="mb-8">
+            <BackgroundGradient key={category} className="">
               <BentoGrid>
                 <BentoCard
                   name={category.charAt(0).toUpperCase() + category.slice(1)}
                   background={
                     <img
-                      src={`https://ik.imagekit.io/lrigu76hy/tailark/${category}.jpg?updatedAt=1745733473768`}
+                      src={`/${category}.jpg`}
                       alt={category}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   }
                   description={`Discover our ${category} collection.`}
-                  href={`/${category}`}
+                  href={`categories/${category}`}
                   cta={`Shop ${category}`}
                 />
               </BentoGrid>
