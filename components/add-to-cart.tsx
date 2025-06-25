@@ -1,5 +1,7 @@
 'use client';
 
+import { Button } from "./ui/button";
+
 type Product = {
   id: number;
   title: string;
@@ -19,16 +21,16 @@ async function addToCart(product: Product) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
+  console.log('Add to cart response:', res.json);
   return res.json();
 }
 
 export default function AddToCartButton({ product }: { product: Product }) {
   return (
-    <button
-      className="bg-primary text-white px-6 py-2 rounded-lg font-semibold"
+    <Button
       onClick={() => addToCart(product)}
     >
       Add to Cart
-    </button>
+    </Button>
   );
 }

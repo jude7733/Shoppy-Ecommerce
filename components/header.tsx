@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@/components/logo'
 import { Menu, ShoppingBagIcon, ShoppingCartIcon, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
@@ -69,9 +68,7 @@ export const Navbar = () => {
                 <Button
                   asChild
                   size="sm">
-                  <Link href="#">
-                    <span>Cart <ShoppingCartIcon className='inline' fill='red' /> </span>
-                  </Link>
+                  <span>Cart <ShoppingCartIcon className='inline' fill='red' /> </span>
                 </Button>
               </div>
             </div>
