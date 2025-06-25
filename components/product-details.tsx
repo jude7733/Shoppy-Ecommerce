@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Product } from "./product-card";
-import { Button } from "./ui/button";
-import { ShoppingCartIcon, StarIcon, UserRoundIcon } from "lucide-react";
+import { StarIcon, UserRoundIcon } from "lucide-react";
+import AddToCartButton from "./add-to-cart";
 
-export function ProductDetails({ id, title, price, description, category, image, rating }: Product) {
+export function ProductDetails({ id, title, price, description, image, rating }: Product) {
   return (
     <div className="p-22 flex flex-col items-center mx-auto" key={id}>
       <div className="flex items-center justify-end gap-4 w-full mb-4">
@@ -14,9 +14,9 @@ export function ProductDetails({ id, title, price, description, category, image,
       <h1 className="text-3xl font-bold mb-4">{title}</h1>
       <p className="text-base text-gray-700 mb-8 max-w-3xl">{description}</p>
 
-      <div className="flex justify-around gap-10">
+      <div className="flex flex-col items-center justify-center gap-10">
         <p className="font-bold text-2xl mb-4">${price}</p>
-        <Button variant="default">Add to Cart <ShoppingCartIcon /></Button>
+        <AddToCartButton product={{ id, title, price, description, image }} />
       </div>
     </div>
   );

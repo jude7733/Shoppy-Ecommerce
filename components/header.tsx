@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Logo } from '@/components/logo'
-import { Menu, X } from 'lucide-react'
+import { Menu, ShoppingBagIcon, ShoppingCartIcon, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 
@@ -24,7 +24,8 @@ export const Navbar = () => {
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2">
-                <Logo />
+                <ShoppingBagIcon />
+                Shoppy
               </Link>
 
               <button
@@ -67,17 +68,9 @@ export const Navbar = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button
                   asChild
-                  variant="outline"
                   size="sm">
                   <Link href="#">
-                    <span>Login</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="sm">
-                  <Link href="#">
-                    <span>Sign Up</span>
+                    <span>Cart <ShoppingCartIcon className='inline' fill='red' /> </span>
                   </Link>
                 </Button>
               </div>
