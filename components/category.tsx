@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { BentoCard, BentoGrid } from "./magicui/bento-grid"
 import { BackgroundGradient } from "./ui/background-gradient"
 
@@ -16,10 +17,12 @@ export default async function Category() {
                 <BentoCard
                   name={category.charAt(0).toUpperCase() + category.slice(1)}
                   background={
-                    <img
+                    <Image
                       src={`/${category}.jpg`}
                       alt={category}
                       className="h-full w-full object-contain"
+                      width={400}
+                      height={400}
                     />
                   }
                   description={`Discover our ${category} collection.`}

@@ -1,4 +1,3 @@
-import { Logo } from '@/components/logo'
 import { ShoppingBagIcon } from 'lucide-react'
 import Link from 'next/link'
 
